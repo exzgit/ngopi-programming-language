@@ -11,16 +11,13 @@ file(GLOB_RECURSE NGOPI_SOURCES
 )
 
 # Define the executable output name based on platform
-if(WIN32)
-    set(EXECUTABLE_NAME ngopi.exe)
-else()
-    set(EXECUTABLE_NAME ngopi)
-endif()
+set(EXECUTABLE_NAME ngopi)
 
 add_executable(${EXECUTABLE_NAME} ${NGOPI_SOURCES})
 
 target_include_directories(${EXECUTABLE_NAME} PRIVATE
     ${CMAKE_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/src/compiler
     ${CMAKE_SOURCE_DIR}/src/core
     ${CMAKE_SOURCE_DIR}/src/core/crypto
     ${CMAKE_SOURCE_DIR}/src/optionals
