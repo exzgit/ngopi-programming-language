@@ -317,7 +317,7 @@ namespace ngopi {
             advance();
         } else if (current == '=' && next == '=') {
             type = TokenType::Equal;
-            value = "==";
+            value = "=";
             advance();
         }
         // Single character operators and punctuation
@@ -335,7 +335,7 @@ namespace ngopi {
                 case '@': type = TokenType::At; break;
                 case '!': type = TokenType::Exclamation; break;
                 case '|': type = TokenType::Or; break;
-                case '=': type = TokenType::Double; break;
+                case '=': type = TokenType::IsEqual; break;
                 case ',': type = TokenType::Comma; break;
                 case '.': type = TokenType::Dot; break;
                 case '<': type = TokenType::Less; break;
